@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juegos Educativos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-selection">
+        <h1>Selecciona un Juego</h1>
+        <button id="translation-game-button">Juego de Traducción</button>
+        <button id="dictation-game-button">Juego de Dictado</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const translationButton = document.getElementById("translation-game-button");
+            const dictationButton = document.getElementById("dictation-game-button");
+
+            translationButton.addEventListener("click", () => {
+                window.location.href = "translation.html";
+            });
+
+            dictationButton.addEventListener("click", () => {
+                window.location.href = "dictation.html";
+            });
+        });
+    </script>
+</body>
+</html>

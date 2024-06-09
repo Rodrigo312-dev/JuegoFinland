@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Dictado</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game">
+        <h1>Juego de Dictado</h1>
+        
+        <div id="dictation-game">
+            <h2>Escribe la palabra dictada</h2>
+            <button id="play-audio">Reproducir Audio</button>
+            <input type="text" id="dictation-input" placeholder="Escribe la palabra" autofocus>
+            <button id="dictation-submit">Enviar</button>
+            <p id="dictation-feedback"></p>
+            <p id="attempts-left"></p> <!-- Mostrar intentos restantes -->
+            <button id="random-word">Cambiar de Palabra</button>
+            <button id="go-to-translation">Ir al Juego de Traducción</button> <!-- Botón para ir al otro juego -->
+        </div>
+        <button id="reset-game">Reiniciar Juego</button>
+        <div id="virtual-keyboard">
+            <h2>Teclado Virtual</h2>
+            <div id="keys-container"></div>
+        </div>
+    </div>
+
+    <script src="keyboard.js"></script>
+    <script src="dictation.js"></script>
+    <script>
+        document.getElementById("go-to-translation").addEventListener("click", () => {
+            window.location.href = "translation.html"; // Redirecciona al juego de translation
+        });
+    </script>
+</body>
+</html>
